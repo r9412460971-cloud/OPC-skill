@@ -184,3 +184,62 @@ Atlas 研发的模型/框架，由 Vega 负责产品化封装：
 
 *交易运营部 | 总经理：Vega（维加）*
 *"精准执行，零差错运营，是信任的基石。"*
+
+---
+
+## 九、中文 PDF 生成规范
+
+> **适用范围**：所有需要生成中文 PDF 报告的自动化脚本（研究报告、客户报告、运营月报等）。
+
+### 9.1 问题背景
+
+使用 `fpdf2` 生成中文 PDF 时，若字体选择或 emoji 处理不当，会出现：
+- **PingFang OTF**：在部分 PDF 阅读器（如 macOS Preview）中子集化后乱码；
+- **STHeiti TTC**：数字、英文等 ASCII 字符缺失；
+- **emoji**：直接缺失字形或显示为方框。
+
+### 9.2 推荐方案
+
+**字体**：使用 **NotoSansCJKsc（思源黑体）**，路径：
+- 优先：`r9-opc-operations/assets/fonts/NotoSansCJKsc-{Regular,Bold}.otf`
+- 回退：`~/.opc_fonts/NotoSansCJKsc-{Regular,Bold}.otf`
+
+**依赖**：
+```bash
+pip install fpdf2
+```
+
+**脚本模板**：直接使用本 skill 提供的模板：
+```bash
+python3 ~/.kimi/skills/r9-opc-operations/scripts/chinese_pdf.py
+```
+
+### 9.3 关键守则
+
+1. **必须用 `\U000xxxxx`（8 位）表示 emoji Unicode 范围**，`\u` 只支持 4 位，写错会误删 ASCII 数字/字母。
+2. **所有写入 PDF 的文本先经过 `clean_text()` 清洗**，替换或移除 emoji、零宽字符、变体选择符。
+3. **不要混合多种字体渲染同一段文本**；若需特殊符号，先用 `clean_text` 转为文字描述。
+4. **生成后用 PyMuPDF 抽样渲染检查**（至少检查封面、表格页、数字页）。
+
+### 9.4 最小可复现测试
+
+```python
+from fpdf import FPDF
+
+pdf = FPDF()
+pdf.add_font('NotoCJK', '', '/Users/r9/.kimi/skills/r9-opc-operations/assets/fonts/NotoSansCJKsc-Regular.otf')
+pdf.add_page()
+pdf.set_font('NotoCJK', '', 16)
+pdf.cell(0, 10, 'R9 OPC 投顾公司 · 稳稳的幸福 5508 赞', new_x='LMARGIN', new_y='NEXT')
+pdf.output('/tmp/test.pdf')
+```
+
+如果这行文字能正常显示中文、英文、数字，说明字体配置正确。
+
+### 9.5 验证清单
+
+- [ ] 中文正常显示
+- [ ] 英文正常显示
+- [ ] 数字正常显示
+- [ ] emoji 被替换或移除（不显示为方框）
+- [ ] 在 macOS Preview / Edge / Adobe Reader 中打开无乱码
