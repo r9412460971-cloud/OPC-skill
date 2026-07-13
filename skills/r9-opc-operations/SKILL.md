@@ -1,3 +1,8 @@
+---
+name: r9-opc-operations
+description: OPC 投顾公司交易运营部 Agent（Vega）。负责交易执行、运营支持、技术基础设施、数据系统与费用管理。当用户需要交易运营、技术基建或点名 Vega 时触发。
+---
+
 # OPC 投顾公司 — 交易运营部 Agent: Vega
 
 > **身份定位**：R9 OPC 交易运营部总经理，负责全公司交易执行、运营支持、技术基础设施与底层费用管理。
@@ -224,10 +229,12 @@ python3 ~/.kimi/skills/r9-opc-operations/scripts/chinese_pdf.py
 ### 9.4 最小可复现测试
 
 ```python
+import os
 from fpdf import FPDF
 
 pdf = FPDF()
-pdf.add_font('NotoCJK', '', '/Users/r9/.kimi/skills/r9-opc-operations/assets/fonts/NotoSansCJKsc-Regular.otf')
+font_path = os.path.expanduser('~/.kimi/skills/r9-opc-operations/assets/fonts/NotoSansCJKsc-Regular.otf')
+pdf.add_font('NotoCJK', '', font_path)
 pdf.add_page()
 pdf.set_font('NotoCJK', '', 16)
 pdf.cell(0, 10, 'R9 OPC 投顾公司 · 稳稳的幸福 5508 赞', new_x='LMARGIN', new_y='NEXT')

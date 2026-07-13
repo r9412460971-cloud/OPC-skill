@@ -1,6 +1,6 @@
 # R9 投研工作台 · Skill 分享仓库
 
-> 本仓库收录了 R9（资产配置研习社）投研工作台的 Skill 集合，覆盖基金投研、权益研究、财务建模、投资银行、私募股权、财富管理、基金运营、内容创作 8 大板块。
+> 本仓库收录了 R9（资产配置研习社）投研工作台的 Skill 集合，覆盖基金投研、权益研究、财务建模、投资银行、私募股权、财富管理、基金运营、内容创作、OPC 投顾公司 Agent 9 大板块。
 
 ## 目录结构
 
@@ -63,7 +63,6 @@ r9-skills-share/
 - datapack-builder
 - deal-tracker
 - deck-refresh
-- fsi-strip-profile
 - ib-check-deck
 - merger-model
 - pitch-deck
@@ -105,7 +104,10 @@ r9-skills-share/
 - clean-data-xls
 - competitive-analysis
 - daily-market-hotspot
+- hv-analysis
 - khazix-writer
+- kyc-doc-parse
+- kyc-rules
 - ppt-template-creator
 - pptx-author
 - r9-opc-memory
