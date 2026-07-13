@@ -249,7 +249,7 @@ Week 3+: P2 优化
 
 ## 八、已完成的 P0 修复（2026-07-13）
 
-以下修改已在本地克隆仓库 `/Users/saucebehumble/OPC-skill-audit` 中完成，并通过自动化验证脚本确认无回归：
+以下修改已在本地克隆仓库 `/Users/saucebehumble/OPC-skill-audit` 中完成，并通过 `scripts/validate_p0.py` 验证脚本确认无回归：
 
 | 问题 | 修复内容 | 涉及文件 |
 |------|---------|----------|
