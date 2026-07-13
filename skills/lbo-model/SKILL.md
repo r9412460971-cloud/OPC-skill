@@ -1,6 +1,7 @@
 ---
 name: lbo-model
-description: This skill should be used when completing LBO (Leveraged Buyout) model templates in Excel for private equity transactions, deal materials, or investment committee presentations. Supports A-share and Hong Kong listed companies where applicable (note: LBO activity in China is primarily offshore/Red Chip structures). The skill fills in formulas, validates calculations, and ensures professional formatting standards that adapt to any template structure. For Chinese market financial data, reference the china-market-data skill.
+description: |
+  This skill should be used when completing LBO (Leveraged Buyout) model templates in Excel for private equity transactions, deal materials, or investment committee presentations. Supports A-share and Hong Kong listed companies where applicable (note: LBO activity in China is primarily offshore/Red Chip structures). The skill fills in formulas, validates calculations, and ensures professional formatting standards that adapt to any template structure. For Chinese market financial data, reference the china-market-data skill.
 ---
 
 ---

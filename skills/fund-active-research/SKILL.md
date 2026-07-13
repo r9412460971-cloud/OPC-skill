@@ -29,7 +29,7 @@ description: 主动管理型基金投资研究报告生成工具。当用户需�
 ### 生成单只基金报告
 
 ```bash
-cd /Users/r9/.kimi/skills/fund-active-research
+cd ~/.kimi/skills/fund-active-research
 python scripts/generate_report.py 519702
 ```
 
