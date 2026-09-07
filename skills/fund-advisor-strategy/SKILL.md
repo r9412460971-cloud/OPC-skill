@@ -63,31 +63,38 @@ allocation = {
 
 ## 且慢API接入
 
+> **数据优先级**：本 skill 默认优先使用且慢(盈米) MCP 获取基金数据。当且慢接口不可用时，按「天天基金网 → AKShare 基金接口 → Wind/iFinD/Choice」顺序降级。
+
 ### 获取API权限
 
 1. 访问 [盈米且慢开放平台](https://www.yingmi.cn) 申请开发者账号
 2. 创建应用获取 `API_KEY` 和 `API_SECRET`
 3. 配置环境变量或直接在代码中使用
 
-### 快速开始
+### 快速开始（MCP 优先）
 
 ```python
-from qieman_api import QiemanAPIClient, fetch_fund_nav_series
+from qieman_mcp_client import create_mcp_client
+import os
 
-# 初始化客户端
-client = QiemanAPIClient('your_api_key', 'your_api_secret')
+# 从环境变量读取 API Key（推荐）
+client = create_mcp_client(os.getenv('QIEMAN_MCP_API_KEY'))
 
-# 获取基金净值
-nav_df = client.get_fund_nav('000001', limit=252)
-
-# 搜索基金
-funds = client.search_funds('沪深300', fund_type='index')
-
-# 分析组合
-analysis = client.analyze_portfolio([
-    {"code": "000001", "weight": 0.3},
-    {"code": "110020", "weight": 0.7}
-])
+if client.connect():
+    # 获取基金信息
+    info = client.get_fund_info('000001')
+    
+    # 获取基金净值
+    nav = client.get_fund_nav('000001', limit=252)
+    
+    # 搜索基金
+    funds = client.search_funds('沪深300', fund_type='index')
+    
+    # 分析组合
+    analysis = client.analyze_portfolio([
+        {"code": "000001", "weight": 0.3},
+        {"code": "110020", "weight": 0.7}
+    ])
 ```
 
 ### 环境变量配置

@@ -44,3 +44,9 @@ tracker_data.json
 *.temp
 *.swp
 *~
+.venv/
+venv/
+node_modules/
+__pycache__/
+.DS_Store
+*.pyc

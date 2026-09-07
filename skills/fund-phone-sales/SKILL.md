@@ -218,3 +218,10 @@ description: 基金电话营销话术生成与客户沟通辅助工具。适用�
 2. 推荐基金信息（代码/名称/类型）
 3. 营销目的（首次触达/追加销售/异议处理）
 4. 特殊要求（如有）
+
+## 高净值客户专场
+
+针对高净值/私人银行客户的电话邀约与面谈邀约，参考：
+- [高净值客户电话邀约话术手册](references/hnw_phone_invitation_scripts.md) — 邀约由头、常用话术、异议处理
+- [高净值客户 KYC 与面谈手册](../r9-hnw-fund-companion/references/hnw_kyc_playbook.md) — 面谈规划、KYC 问题集
+- [高净值客户分群经营与建议书解读策略](../r9-hnw-fund-companion/references/hnw_client_segmentation_strategy.md) — 客户分群经营策略

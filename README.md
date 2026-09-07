@@ -20,14 +20,16 @@ r9-skills-share/
 
 ## 包含的 Skill
 
-本仓库共包含 **93 个 Skill**，按板块分类如下：
+本仓库共包含 **120 个 Skill**，按板块分类如下：
 
 ### 1. 基金投研
+- active-fund-rebalancing-validation
 - bond-plus-fund-evaluation
 - bond-plus-tracker
 - cmb-fyf-companion-service
 - community-voc-analysis
 - fund-active-research
+- fund-advisor-assistant
 - fund-advisor-strategy
 - fund-diagnosis-3.10
 - fund-manager-deep-research
@@ -38,7 +40,9 @@ r9-skills-share/
 - fund-sales-rookie
 - optical-module-tracker
 - post-investment-companion
+- private-fund-evaluation
 - r9-fund-deep-research
+- r9-quant-strategist
 
 ### 2. 权益研究
 - catalyst-calendar
@@ -86,10 +90,18 @@ r9-skills-share/
 ### 6. 财富管理
 - client-report
 - client-review
+- drawdown-client-playbook
 - financial-plan
+- high-net-worth-insurance-companion
 - investment-proposal
 - portfolio-rebalance
+- r9-hnw-client-report
+- r9-hnw-client-review
+- r9-hnw-fund-companion
+- r9-hnw-rebalance
+- r9-wm-assistant
 - tax-loss-harvesting
+- wealth-manager-team-management
 
 ### 7. 基金运营
 - accrual-schedule
@@ -100,19 +112,29 @@ r9-skills-share/
 - variance-commentary
 
 ### 8. 基础设施 / 内容创作
+- aihot
 - audit-xls
+- branch-hv-analysis
 - china-market-data
 - clean-data-xls
 - competitive-analysis
 - daily-market-hotspot
+- human-writing
 - khazix-writer
+- neat-freak
 - ppt-template-creator
 - pptx-author
+- r9-course-knowledge
 - r9-opc-memory
+- r9-rag-engine
 - r9-workbench
+- shanghai-g6-tutor
 - skill-creator
+- skill-reviewer-v2
+- skill-zero
 - static-page-builder
 - weibo-finance-daily
+- wind-index-dashboard
 - xlsx-author
 
 ### 9. OPC 投顾公司 Agent 系列
@@ -130,6 +152,13 @@ r9-skills-share/
 - r9-opc-advisory-delivery
 - r9-opc-advisory-strategy
 - r9-opc-advisory-success
+
+### 10. 基金公司渠道与客户
+- r9-channel-router
+- r9-channel-bank
+- r9-channel-brokerage
+- r9-channel-internet
+- r9-channel-institutional
 
 ## 安装方式
 

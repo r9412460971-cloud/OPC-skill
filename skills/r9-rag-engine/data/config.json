@@ -1,0 +1,8 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "dimension": 512,
+  "chunk_size": 800,
+  "overlap": 100,
+  "total_chunks": 6898,
+  "last_build": "2026-06-28T16:48:06"
+}

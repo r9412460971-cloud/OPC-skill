@@ -1,0 +1,156 @@
+{
+  "client_id": "C2026001",
+  "name": "张先生（示例客户）",
+  "created_at": "2026-07-13",
+  "updated_at": "2026-07-13",
+  "profile": {
+    "age_range": "45-55",
+    "family_structure": "夫妻二人 + 一名子女（16岁）",
+    "occupation": "制造业企业主，公司年营收约5000万",
+    "liquid_assets_million": 30,
+    "investable_assets_million": 20,
+    "annual_income_million": 5,
+    "investment_horizon": "5年以上",
+    "risk_tolerance": "R4-积极型",
+    "risk_capacity": "高",
+    "investment_experience": "8年，曾投资股票、公募基金、信托计划，未直接投资私募证券"
+  },
+  "goals": [
+    {
+      "goal": "资产稳健增值",
+      "priority": 1,
+      "target_return": "年化6-8%",
+      "description": "在控制回撤的前提下实现长期复利"
+    },
+    {
+      "goal": "子女教育金",
+      "priority": 2,
+      "horizon": "8年",
+      "target_amount_million": 2
+    },
+    {
+      "goal": "退休储备",
+      "priority": 3,
+      "horizon": "15年",
+      "description": "55岁后逐步降低工作强度，保持生活品质"
+    }
+  ],
+  "constraints": {
+    "liquidity_need": "保持300万随时可取，用于企业周转",
+    "avoid_sectors": ["烟草", "博彩"],
+    "preferred_products": ["公募基金", "私募基金", "保险年金"],
+    "tax_consideration": true,
+    "estate_planning": true,
+    "insurance_existing": "已配置终身寿险及重疾险"
+  },
+  "ips": {
+    "strategic_allocation": {
+      "equity": 50,
+      "bond": 30,
+      "alternatives": 15,
+      "cash": 5
+    },
+    "taa_adjustment": {
+      "current_view": "中性偏谨慎",
+      "equity_delta": -5,
+      "bond_delta": 5,
+      "notes": "权益市场估值处于历史中位，红利与科技均衡配置"
+    },
+    "benchmark": "中证800*50% + 中债总财富*30% + 黄金*10% + 货币*10%",
+    "rebalance_threshold": 0.05,
+    "max_drawdown_tolerance": "-15%",
+    "review_frequency": "季度"
+  },
+  "holdings": [
+    {
+      "code": "000001",
+      "name": "华夏成长混合",
+      "type": "公募",
+      "category": "主动权益",
+      "weight": 0.08,
+      "amount_million": 1.6
+    },
+    {
+      "code": "110020",
+      "name": "易方达沪深300ETF联接",
+      "type": "公募",
+      "category": "指数",
+      "weight": 0.12,
+      "amount_million": 2.4
+    },
+    {
+      "code": "000171",
+      "name": "华泰柏瑞量化增强",
+      "type": "公募",
+      "category": "量化权益",
+      "weight": 0.10,
+      "amount_million": 2.0
+    },
+    {
+      "code": "000032",
+      "name": "易方达信用债债券A",
+      "type": "公募",
+      "category": "纯债",
+      "weight": 0.15,
+      "amount_million": 3.0
+    },
+    {
+      "code": "002351",
+      "name": "景顺长城稳健回报",
+      "type": "公募",
+      "category": "固收+",
+      "weight": 0.15,
+      "amount_million": 3.0
+    },
+    {
+      "code": "P001",
+      "name": "XX私募证券1号（示例）",
+      "type": "私募",
+      "category": "股票多头",
+      "weight": 0.10,
+      "amount_million": 2.0,
+      "lockup": "12个月",
+      "open_day": "每季度末月15日"
+    },
+    {
+      "code": "P002",
+      "name": "XX量化对冲1号（示例）",
+      "type": "私募",
+      "category": "市场中性",
+      "weight": 0.05,
+      "amount_million": 1.0,
+      "lockup": "6个月",
+      "open_day": "每月15日"
+    },
+    {
+      "code": "GLD",
+      "name": "黄金ETF",
+      "type": "公募",
+      "category": "另类",
+      "weight": 0.10,
+      "amount_million": 2.0
+    },
+    {
+      "code": "CASH",
+      "name": "货币基金",
+      "type": "公募",
+      "category": "现金",
+      "weight": 0.15,
+      "amount_million": 3.0
+    }
+  ],
+  "communication_log": [
+    {
+      "date": "2026-07-13",
+      "channel": "首次建档",
+      "topic": "KYC与资产配置需求",
+      "summary": "客户可投资资产约2000万，目标稳健增值，能接受15%以内回撤，希望配置部分私募提升收益。"
+    }
+  ],
+  "service_agreement": {
+    "service_fee": "AUM 0.5%",
+    "review_frequency": "季度",
+    "advisor": "Mira",
+    "next_review_date": "2026-10-13"
+  }
+}
